@@ -15,6 +15,7 @@ Für die Nachbearbeitung der heruntergeladenen Dateien sind ffmpeg und ffprobe e
 * Den jeweiligen Link kopieren
 * Das Skript "download_mp3.bat" starten
 * Link einfügen und mit "Enter" bestätigen
+* Nach Abschluss des Downloads wird die Datei in das mp3-Format umgewandelt, im Ordner "Downloads" abgelegt und bekommt als Dateiname den Titel von der Ursprungsseite
 
 ## Als mp4 herunterladen
 * Den jeweiligen Link kopieren
