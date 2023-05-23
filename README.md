@@ -20,7 +20,7 @@ Für die Nachbearbeitung der heruntergeladenen Dateien sind ffmpeg und ffprobe e
 ## Als mp4 herunterladen
 1. Den jeweiligen Link kopieren
 2. Das Skript "download_mp4.bat" starten
-3. Link einfügen und optional einen Dateinamen eingeben
+3. Link einfügen, optional einen Dateinamen eingeben und mit "Enter" bestätigen
 4. Das Video wird nach Abschluss, wenn sie nicht schon im mp4-Format ist, in eine mp4 Datei umgewandelt
 * Wenn ein Dateiname eingegeben wurde, wird die heruntergeladene Datei nach Abschluss in den eingegebenen Namen umbenannt.
 * Wenn <ins>kein</ins> Dateiname eingegeben wurde, wird der zugehörige "tmp" Ordner in "Downloads" lediglich mit "- Fertig" ergänzt
