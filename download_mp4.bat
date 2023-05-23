@@ -24,7 +24,7 @@ echo.
 set /a DirNr=1
 
 :tmp_dir
-set TmpDir="%BaseDir%\Downloads\temp%DirNr%"
+set TmpDir="%BaseDir%\Downloads\tmp%DirNr%"
 
 IF NOT EXIST "%TmpDir%*" (
     mkdir "%TmpDir%"
