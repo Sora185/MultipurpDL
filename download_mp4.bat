@@ -39,7 +39,10 @@ IF EXIST "%TmpDir%*" (
 .\bin\yt-dlp.exe --ffmpeg-location ".\bin\ffmpeg.exe" -o "%TmpDir%\%%(title)s.%%(ext)s" --audio-quality 192k --remux-video mp4 --console-title "%URL%"
 echo.
 
+echo ^>Setze Zeitstempel
+start /min /wait "" powershell -command "(Get-Item %TmpDir%\*.mp4).LastWriteTime = (Get-Date);exit" >NUL 2>&1
 
+echo ^>Setze Dateiname
 IF "%CustomName%"=="" (
     move %TmpDir% "%TmpDir% - Fertig" >NUL 2>&1
 )
