@@ -7,6 +7,12 @@ set BaseDir=%cd%
 
 ::==============================================
 
+IF NOT EXIST ".\bin\yt-dlp.exe" call :MissingFile yt-dlp.exe
+IF NOT EXIST ".\bin\ffmpeg.exe" call :MissingFile ffmpeg.exe
+IF NOT EXIST ".\bin\ffprobe.exe" call :MissingFile ffprobe.exe
+
+::==============================================
+
 set /p URL="URL: "
 echo.
 
@@ -45,6 +51,11 @@ IF NOT "%CustomName%"=="" (
 echo ----------------------------------------------------------------------------------------------------
 echo Vorgang abgeschlossen
 echo.
+pause
+goto :end
+
+:MissingFile
+echo %~1 konnte nicht gefunden werden!
 pause
 goto :end
 
