@@ -5,20 +5,31 @@ chcp 65001 >NUL
 cd /d "%~dp0"
 set BaseDir=%cd%
 
-::==============================================
-
+::==================================================================
+::Check, ob yt-dlp, ffmpeg und ffprobe vorhanden sind
 IF NOT EXIST ".\bin\yt-dlp.exe" call :MissingFile yt-dlp.exe
 IF NOT EXIST ".\bin\ffmpeg.exe" call :MissingFile ffmpeg.exe
 IF NOT EXIST ".\bin\ffprobe.exe" call :MissingFile ffprobe.exe
 
-::==============================================
+::==================================================================
 
+:start
 set /p URL="URL: "
 echo.
 
 set /p CustomName="Optional: Name der Datei (ohne Dateiende): "
 echo ----------------------------------------------------------------------------------------------------
 echo.
+IF EXIST "%BaseDir%\Downloads\%CustomName%.mp4" (
+    echo.
+    echo Dateiname existiert bereits. Bitte einen Anderen eingeben.
+    echo.
+    pause
+    set "URL="
+    cls
+    goto :start
+)
+
 
 ::Wenn Ordner tmp1 nicht verfügbar ist, zähle +1. Wiederhole bis tmpX frei ist.
 set /a DirNr=1
