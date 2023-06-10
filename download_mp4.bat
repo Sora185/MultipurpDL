@@ -59,6 +59,7 @@ IF "%CustomName%"=="" (
 )
 IF NOT "%CustomName%"=="" (
     move %TmpDir%\*.mp4 "%BaseDir%\Downloads\%CustomName%.mp4" >NUL 2>&1
+    timeout /t 2 /nobreak >NUL
     rd /S /Q %TmpDir%
 )
 
