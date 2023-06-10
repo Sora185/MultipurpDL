@@ -17,7 +17,7 @@ IF NOT EXIST ".\bin\ffprobe.exe" call :MissingFile ffprobe.exe
 set /p URL="URL: "
 echo.
 
-set /p CustomName="Optional: Name der Datei (ohne Dateiende): "
+set /p CustomName="Optional: Name der Datei (ohne Dateiendung): "
 echo ----------------------------------------------------------------------------------------------------
 echo.
 IF EXIST "%BaseDir%\Downloads\%CustomName%.mp4" (
